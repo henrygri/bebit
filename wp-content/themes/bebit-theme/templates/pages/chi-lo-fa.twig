@@ -1,0 +1,11 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	<!-- Intro section chi lo fa -->
+	{% include "/templates/partial/chi-lo-fa/intro.twig" with {fields:fields_page} %}
+
+	<!-- Team section chi lo fa -->
+	{% include "/templates/partial/chi-lo-fa/team.twig" with {teams:fields_page} %}
+
+{% endblock %}

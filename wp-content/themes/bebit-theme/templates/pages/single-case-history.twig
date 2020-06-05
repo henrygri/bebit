@@ -1,0 +1,73 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+		<!-- Intro text single case -->
+		{% include 'partial/single-case/intro.twig' with {title: case.titolo_case, claim:case.claim_case} %}
+
+		{% if case.immagine_case|length %}
+			<section id="imageFixed" class="section">
+				<div class="background" style="background-position:top;"></div>
+			</section>
+
+			<style media="screen">
+					#imageFixed .background{ background-image:url({{ case.meta('immagine_case') }});}
+					{% if case.meta("immagine_case_mobile")|length %}
+					@media only screen and (max-width:576px) {
+						#imageFixed .background{background-attachment: scroll;height: 100vh;background-image:url({{ case.meta("immagine_case_mobile") }}) }
+					}
+					{% endif %}
+			</style>
+		{% endif %}
+
+		{% set i = 0 %}
+
+		{% for sections in case.meta('sezioni_case') %}
+
+				{% if sections.acf_fc_layout == 'sezione_testo_case' %}
+
+						<!-- Section text single case -->
+						{% include 'partial/single-case/text.twig' with {section: sections} %}
+
+				{% elseif sections.acf_fc_layout == 'mobile_app' %}
+
+						<!-- Section mobile app single case -->
+						{% include 'partial/single-case/mobile-app.twig' with {section: sections} %}
+
+				{% elseif sections.acf_fc_layout == 'sezione_numeri' %}
+
+						<!-- Section numbers single case -->
+						{% include 'partial/single-case/numbers.twig' with {section: sections} %}
+
+				{% elseif sections.acf_fc_layout == 'sezione_social' %}
+
+						<!-- Section social single case -->
+						{% include 'partial/single-case/social.twig' with {section: sections} %}
+
+				{% elseif sections.acf_fc_layout == 'sezione_slider' %}
+
+						{% set i = i + 1 %}
+						<!-- Section slider single case -->
+						{% include 'partial/single-case/slider.twig' with {section: sections, index:i} %}
+
+				{% elseif sections.acf_fc_layout == 'sezione_testo_slider' %}
+
+						{% set i = i + 1 %}
+						<!-- Slider text single case -->
+						{% include 'partial/single-case/text-slider.twig' with {section: sections, index:i} %}
+
+				{% elseif sections.acf_fc_layout == 'sezione_cta' %}
+
+						<!-- CTA single case -->
+						{% include 'partial/single-case/cta.twig' with {section: sections} %}
+
+				{% endif %}
+
+		{% endfor %}
+
+		<!-- Related case single case -->
+		{% include 'partial/single-case/related-case.twig' with {cases: related_case} %}
+
+
+
+{% endblock %}

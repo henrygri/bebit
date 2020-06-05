@@ -1,0 +1,20 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	<!-- Image header Home -->
+	{% include "/templates/partial/home/image-header.twig" with {cases:case} %}
+
+	<!-- Grid flex Home -->
+	{% include "/templates/partial/home/grid-flex-masonry.twig" with {fields:fields_page,cases:list_case, num_case: case_count} %}
+
+	<!-- Be trusty section Home -->
+	{% include "/templates/partial/home/be-trusty-section.twig" with {press:sezione_press} %}
+
+	<!-- Text section -->
+	{% include "/templates/partial/home/text.twig" with {fields:fields_page} %}
+
+	<!-- Wanna be section Home -->
+	{% include "/templates/partial/home/wanna-be-section.twig" with {language:language,services:list_servizi, grid: fields_page.griglia_servizi,link:fields_page.link_approfondiamo} %}
+
+{% endblock %}

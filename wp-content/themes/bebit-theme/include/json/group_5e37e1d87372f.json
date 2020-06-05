@@ -1,0 +1,62 @@
+{
+    "key": "group_5e37e1d87372f",
+    "title": "Archivio case",
+    "fields": [
+        {
+            "key": "field_5e37e1f0563e2",
+            "label": "Titolo",
+            "name": "titolo_archivio_case",
+            "type": "text",
+            "instructions": "Inserisci titolo",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e37e206563e3",
+            "label": "Testo",
+            "name": "testo_archivio_case",
+            "type": "wysiwyg",
+            "instructions": "Inserisci testo",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "text",
+            "media_upload": 1,
+            "toolbar": "full",
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "admin_page",
+                "operator": "==",
+                "value": "case-history"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1580720726
+}

@@ -1,0 +1,63 @@
+{
+    "key": "group_5e393a1e0a0b5",
+    "title": "Press",
+    "fields": [
+        {
+            "key": "field_5e393c6e55139",
+            "label": "Contenuto",
+            "name": "contenuto_press",
+            "type": "wysiwyg",
+            "instructions": "Inserisci testo",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "text",
+            "media_upload": 1,
+            "toolbar": "full",
+            "delay": 0
+        },
+        {
+            "key": "field_5e393fa86bf33",
+            "label": "Link articolo originale",
+            "name": "link_articolo",
+            "type": "link",
+            "instructions": "Inserisci link all'articolo originale",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "press"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1580810202
+}

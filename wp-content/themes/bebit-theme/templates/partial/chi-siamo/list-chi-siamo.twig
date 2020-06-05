@@ -1,0 +1,33 @@
+<section id="cominciamo" class="section">
+	<div class="container">
+		{% if list.titolo_grid_three|length %}
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h3 class="title_section">{{ list.titolo_grid_three }}</h3>
+			</div>
+		</div>
+		{% endif %}
+		<div class="row mt-5">
+			{% for box in list.box_grid_three %}
+				<div class="col-lg-4">
+					<div class="box_single_chisiamo wow fadeIn" data-wow-delay="{{ loop.index * 200}}ms">
+						{% if box.immagine_grid_three|length %}
+							<div class="background image_chisiamo" style="background-image:url({{ box.immagine_grid_three }})"></div>
+						{% endif %}
+						<div class="box_text_single_chisiamo">
+							{% if box.titolo_column_three|length %}
+								<h3 class="mb-4"><span>{{ box.titolo_column_three }}</span></h3>
+							{% endif %}
+							{% if box.testo_column_three|length %}
+								<div class="my-4">{{ box.testo_column_three }}</div>
+							{% endif %}
+							{% if box.link_column_three.url|length %}
+								<a href="{{ box.link_column_three.url }}" class="btn_bebit" title="{{ box.link_column_three.title }}">{{ box.link_column_three.title }}</a>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>

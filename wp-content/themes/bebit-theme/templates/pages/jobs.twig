@@ -1,0 +1,20 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	{% include "/templates/partial/jobs/title.twig" with {title:jobs.titolo_jobs,text:jobs.testo_jobs} %}
+
+	{% include "/templates/partial/jobs/image.twig" with {image:jobs.meta('immagine_jobs')} %}
+
+	{% include "/templates/partial/jobs/title-mobile.twig" with {title:jobs.titolo_jobs,text:jobs.testo_jobs} %}
+
+	<section id="jobsPosition" class="section">
+		<div id="accordion">
+			{% include "/templates/partial/jobs/position.twig" with {jobs:jobs.meta('posizioni_aperte')} %}
+			{% include "/templates/partial/jobs/position-freelance.twig" with {job:jobs.meta('freelance')} %}
+		</div>
+	</section>
+
+	<section class="section"></section>
+
+{% endblock %}

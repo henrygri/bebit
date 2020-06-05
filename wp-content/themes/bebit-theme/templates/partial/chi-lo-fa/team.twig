@@ -1,0 +1,18 @@
+{% if teams|length %}
+<section id="team" class="grey pt-5">
+	<div class="container">
+		<div class="row">
+			{% for team in teams.meta('team') %}
+			<div class="col-lg-4 col-md-6 text-center wow fadeInUp" data-wow-delay="200ms">
+				<div class="box_single_team">
+					<div class="background image_team" style="background-image:url({{ team.immagine_team }})"></div>
+					<h3 class="mt-3">{{ team.nome_team }}</h3>
+					<span>{{ team.ruolo_team }}</span>
+					<p class="mt-3">{{ team.descrizione_team }}</p>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+{% endif %}

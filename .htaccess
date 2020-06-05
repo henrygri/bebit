@@ -1,0 +1,72 @@
+
+# BEGIN WordPress
+# The directives (lines) between `BEGIN WordPress` and `END WordPress` are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+# START REDIRECT
+
+Redirect 301 /chi-siamo/people/ /chi-siamo/chi-lo-fa/
+Redirect 301 /it/casehistory/ /case-history/
+Redirect 301 /case-history/be-the-adecco-group/ /case-history/the-adecco-group/
+Redirect 301 /case-history/be-arbre-magique/ /case-history/arbre-magique/
+Redirect 301 /case-history/be-chivas/ /case-history/chivas/
+Redirect 301 /case-history/be-guinness/ /case-history/guinness/
+Redirect 301 /case-history/be-a-c-milan/ /case-history/ac-milan/
+Redirect 301 /case-history/be-mangusta/ /case-history/mangusta/
+Redirect 301 /case-history/be-puma/ /case-history/puma/
+Redirect 301 /case-history/be-bvlgari/ /case-history/bvlgari/
+Redirect 301 /case-history/be-bimby/ /case-history/bimby/
+Redirect 301 /case-history/be-guardini/ /case-history/guardini/
+Redirect 301 /case-history/be-american-crew/ /case-history/american-crew/
+Redirect 301 /case-history/be-reda/ /case-history/reda/
+Redirect 301 /case-history/be-revlon-professional/ /case-history/revlon-professional/
+Redirect 301 /case-history/be-mylia/ /case-history/mylia/
+Redirect 301 /case-history/be-bosch/ /case-history/bosch/
+Redirect 301 /case-history/be-the-adecco-group/ /case-history/the-adecco-group/
+Redirect 301 /case-history/be-unipolsai/ /case-history/unipolsai/
+Redirect 301 /case-history/be-adecco-staffing/ /case-history/adecco-staffing/
+Redirect 301 /case-history/be-casa-radicci/ /case-history/casa-radicci/
+Redirect 301 /case-history/be-vera-assicurazioni/ /case-history/vera-assicurazioni/
+Redirect 301 /case-history/be-zefhir/ /case-history/zefhir/
+Redirect 301 /case-history/be-airitaly/ /case-history/air-italy/
+Redirect 301 /case-history/be-mailboxes/ /case-history/mail-boxes-etc/
+Redirect 301 /case-history/be-sogimi/ /case-history/sogimi/
+Redirect 301 /case-history/be-orphea/ /case-history/orphea/
+Redirect 301 /case-history/be-brico/ /case-history/bricocenter/
+Redirect 301 /case-history/be-pampero/ /case-history/pampero
+Redirect 301 /case-history/be-fondazione-adecco/ /case-history/fondazione-adecco/
+Redirect 301 /it/chi-siamo/i-nostri-servizi/ /chi-siamo/cosa-facciamo/
+Redirect 301 /it/ /
+Redirect 301 /it/chi-siamo/press/ /#beTrustySection
+Redirect 301 /chi-siamo/press/ /#beTrustySection
+Redirect 301 /it/chi-siamo/ /chi-siamo/
+Redirect 301 /annabussolino-1/ /chi-siamo/chi-lo-fa/
+Redirect 301 /clienti/ /chi-siamo/#beOneOfUs
+Redirect 301 /chi-siamo/press/ /#beTrustySection
+Redirect 301 /newsletter/ /contatti/
+Redirect 301 /chi-siamo/i-nostri-servizi/ /chi-siamo/cosa-facciamo/
+Redirect 301 /guinness-conferma-lincarico-bebit-firma-lidentita-social-del-brand-anche-nel-2017/ /press/guinness-conferma-lincarico-bebit-firma-lidentita-social/
+Redirect 301 /adecco-group-e-online-con-il-nuovo-sito-firma-bebit/ /press/adecco-group-e-online-con-il-nuovo-sito-firma-bebit/
+Redirect 301 /st-patricks-day-sui-social-si-festeggia-con-guinness-firma-bebit/ /press/st-patricks-day-sui-social-si-festeggia-con-guinness-firma-bebit/
+Redirect 301 /puma-eyewear-e-no-cage-firma-libera-brand-building/ /press/puma-eyewear-e-no-cage-firma-libera-brand-building/
+Redirect 301 /bebit-realizza-il-nuovo-sito-di-fondazione-adecco/ /press/bebit-realizza-il-nuovo-sito-di-fondazione-adecco/
+Redirect 301 /bebit-si-aggiudica-la-gestione-dellidentita-social-di-guinness/ /press/bebit-si-aggiudica-la-gestione-dellidentita-social-di-guinness/
+Redirect 301 /affidato-a-bebit-lo-sviluppo-digital-di-fiorfood/ /press/affidato-a-bebit-lo-sviluppo-digital-di-fiorfood/
+Redirect 301 /case-history/be-spring-professional/ /case-history/spring-professional/
+Redirect 301 /portfolio-category/web-site/ /case-history/
+Redirect 301 /author/amministratore/ /case-history/
+Redirect 301 /portfolio-category/ux/ /case-history/
+Redirect 301 /portfolio-category/web-site/ /case-history/
+
+# END REDIRECT

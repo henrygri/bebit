@@ -1,0 +1,11 @@
+{% if section.cta_link.url|length %}
+<section id="cta" class="py-5{% if section.background_cta == 'grey' %} bg_grey_light{% endif %}">
+		<div class="container">
+				<div class="row">
+						<div class="col-lg-12 text-center">
+									<a href="{{ section.cta_link.url }}" class="btn_bebit" title="{{ section.cta_link.title }}" target="{{ section.cta_link.target }}">{{ section.cta_link.title }}</a></div>
+						</div>
+				</div>
+		</div>
+</section>
+{% endif %}

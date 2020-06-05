@@ -1,0 +1,26 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	<!-- Title section -->
+	{% include "/templates/partial/cosa-facciamo/title.twig" with {title:fields_page.titolo_cosafacciamo} %}
+
+	<!-- List service section -->
+	{% include "/templates/partial/cosa-facciamo/list-service.twig" with {text:fields_page.testo_cosafacciamo ,list:fields_page.meta('lista_servizi')} %}
+
+	<!-- Single service section -->
+	{% include "/templates/partial/cosa-facciamo/single-service.twig" with {title:fields_page.meta('titolo_elenco_sotto_servizi'),list:fields_page.meta('lista_servizi')} %}
+
+{% endblock %}
+
+{% block javascript %}
+<script type="text/javascript">
+	var url = window.location.href;
+	if (url.indexOf("#") >= 0) {
+		var label = url.split('/').pop();
+		setTimeout(function(){
+				jQuery('html, body').animate({ scrollTop: jQuery(label).offset().top -100}, 1000);
+		},600);
+	}
+</script>
+{% endblock %}

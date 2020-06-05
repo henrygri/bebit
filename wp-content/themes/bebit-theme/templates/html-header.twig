@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js no-svg ie lt-ie9 lt-ie8 lt-ie7" {{ site.language_attributes }}> <![endif]-->
+<!--[if IE 9]><html class="no-js no-svg ie ie9 lt-ie9 lt-ie8" {{ site.language_attributes }}> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js no-svg" {{ site.language_attributes }}> <!--<![endif]-->
+<head>
+    <meta charset="{{ site.charset }}" />
+    <title>{{ seo.meta_title }}</title>
+    <meta name="description" content="{{ seo.meta_description }}">
+    <meta name="keywords" content="{{ seo.meta_keywords }}">
+    {% if  seo.noindex == true %}
+    <meta name="robots" content="noindex">
+    {% endif %}
+    {% if  seo.nofollow == true %}
+    <meta name="robots" content="nofollow">
+    {% endif %}
+    {% if  seo.canonical_url|length %}
+    <link rel="canonical" href="{{ seo.canonical_url }}">
+    {% endif %}
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ site.theme.link }}/static/assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ site.theme.link }}/static/assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ site.theme.link }}/static/assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ site.theme.link }}/static/assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ site.theme.link }}/static/assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ site.theme.link }}/static/assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ site.theme.link }}/static/assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ site.theme.link }}/static/assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.theme.link }}/static/assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ site.theme.link }}/static/assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.theme.link }}/static/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ site.theme.link }}/static/assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ site.theme.link }}/static/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="{{ site.theme.link }}/static/assets/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{{ site.theme.link }}/static/assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="{{ site.theme.link }}/static/assets/css/bootstrap.min.css" type="text/css" media="screen" />
+    <link href="https://fonts.googleapis.com/css?family=Varela&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ site.theme.link }}/static/assets/css/main.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{{ site.theme.link }}/style.css" type="text/css" media="screen" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="author" href="{{ site.theme.link }}/humans.txt" />
+    <link rel="pingback" href="{{ site.pingback_url }}" />
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <meta property="og:type" content="website" />
+    {% if  seo.meta_title_social|length %}
+    <meta property="og:title" content="{{ seo.meta_title_social }}">
+    {% endif %}
+    {% if  seo.meta_description_social|length %}
+    <meta property="og:description" content="{{ seo.meta_description_social }}">
+    {% endif %}
+    {% if  seo.meta_image_social|length %}
+    <meta property="og:image" itemprop="image" content={{ seo.meta_image_social.url }} />
+    {% endif %}
+    {% if  seo.schema_json|length %}
+    <script type="application/ld+json">
+          {{ seo.schema_json }}
+    </script>
+    {% endif %}
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-70350634-9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-70350634-9');
+    </script>
+
+    {{function('wp_head')}}

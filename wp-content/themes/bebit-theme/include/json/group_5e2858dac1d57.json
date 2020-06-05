@@ -1,0 +1,48 @@
+{
+    "key": "group_5e2858dac1d57",
+    "title": "Privacy",
+    "fields": [
+        {
+            "key": "field_5e2858ef9ea65",
+            "label": "Text privacy",
+            "name": "text_privacy",
+            "type": "wysiwyg",
+            "instructions": "Inserire testo",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "pages\/privacy.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1579702559
+}

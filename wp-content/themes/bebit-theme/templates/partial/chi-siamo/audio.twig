@@ -1,0 +1,15 @@
+<section id="audio" class="section">
+	<div class="container">
+		<div class="row justify-content-md-center">
+			<div class="col-lg-8 text-center">
+				<h4>{{ audio.titolo_prima_parte }}<img src="/content/bebit-no-text.png" alt="Bebit">? {{ audio.titolo_seconda_parte }}</h4>
+				<div class="audio_image my-5"><img src="/content/audio.png"></div>
+				<button class="btn_bebit play-audio" type="button">{{ _e('Listen', 'bebit-theme') }}</button>
+				<audio id="audio-bebit">
+					<source src="{{ audio.audio.url }}">
+					Your browser does not support the audio element.
+				</audio>
+			</div>
+		</div>
+	</div>
+</section>

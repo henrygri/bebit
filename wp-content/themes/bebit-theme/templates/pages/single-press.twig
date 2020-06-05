@@ -1,0 +1,17 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+		<!-- Title header single press -->
+		{% include 'partial/single-press/title.twig' %}
+
+		<!-- Image header single press -->
+		{% include 'partial/single-press/image.twig' with {press: fields_press} %}
+
+		<!-- Content single press -->
+		{% include 'partial/single-press/content.twig' with {press: fields_press} %}
+
+		<!-- Other press single press -->
+		{% include 'partial/single-press/other-press.twig' with {press: other_press} %}
+
+{% endblock %}

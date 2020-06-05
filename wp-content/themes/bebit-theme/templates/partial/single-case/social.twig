@@ -1,0 +1,33 @@
+<section id="contentCaseTwoColumn" class="section section-bottom{% if section.background_sezione_social == 'grey' %} bg_grey_light{% endif %}">
+	<div class="">
+		<div class="container">
+			<div class="box-grid-social">
+			<div class="row scroll-social">
+				<div class="col-lg-6 sticky-social">
+          {% if section.categoria_sezione_social|length %}
+					  <span class="label-case">{{ section.categoria_sezione_social }}</span>
+          {% endif %}
+          {% if section.titolo_sezione_social|length %}
+					  <h3 class="title-section-case mb-4">{{ section.titolo_sezione_social }}</h3>
+          {% endif %}
+          {% if section.testo_sezione_social|length %}
+					  <div>{{ section.testo_sezione_social }}</div>
+          {% endif %}
+				</div>
+        {% if section.gallery_sezione_social|length %}
+				<div class="col-lg-6">
+							<div class="isotope-social">
+                  {% for image in section.gallery_sezione_social %}
+  									<div class="isotope-social-item">
+  											<div class="wow fadeIn" data-wow-delay="{{ loop.index * 200}}ms"><img class="w-100" src="{{ image.url }}"></div>
+  									</div>
+                  {% endfor %}
+							</div>
+				</div>
+        {% endif %}
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,20 @@
+<section id="listService" class="section">
+	<div class="content_list grey">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					{% if text|length %}
+							<div>{{ text }}</div>
+					{% endif %}
+				</div>
+				<div class="col-lg-4 offset-md-2">
+					<ul class="list_service">
+						{% for item in list %}
+								<li><span data-label="{{ item.post_name }}">{{ item.post_title }}</span></li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

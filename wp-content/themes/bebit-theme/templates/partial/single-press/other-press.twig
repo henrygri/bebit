@@ -1,0 +1,58 @@
+{% if press|length %}
+<section id="otherPress" class="mt-5">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="box_other_press d-none d-lg-block">
+                  <h3 class="mt-4">Altri articoli</h3>
+                  <div class="row mt-5">
+                      {% for single in press %}
+                      <div class="col-lg-4">
+                          <div class="wow fadeIn" data-wow-delay="{{ loop.index * 200}}ms">
+                              {% set thumbnail = fn('get_the_post_thumbnail_url', single.ID) %}
+                              <div class="background single_other_press" style="background-image:url({{ thumbnail }})"></div>
+                              <h4>{{ single.post_title }}</h4>
+                              <div class="separator-press"></div>
+                              <p>{{ single.post_date|date }}</p>
+                              <a href="{{ single.guid }}" class="btn_bebit" title="{{ single.post_title }}">Vai all'articolo</a>
+                          </div>
+                      </div>
+                      {% endfor %}
+                  </div>
+              </div>
+              <div class="box_other_press d-lg-none">
+                 <div id="pressCarousel" class="relative carousel slide" data-ride="carousel" data-interval="4000">
+                   <ol class="carousel-indicators">
+                     {% set count = 0 %}
+                     {% for single in press %}
+                        <li data-target="#pressCarousel" data-slide-to="{{ count }}" class="{% if loop.index == 1 %}active{% endif %}"></li>
+                        {% set count = count + 1 %}
+                     {% endfor %}
+                   </ol>
+                    <div class="carousel-inner">
+                        {% for single in press %}
+                        <div class="carousel-item{% if loop.index == 1 %} active{% endif %}">
+                            {% set thumbnail = fn('get_the_post_thumbnail_url', single.ID) %}
+                            {% if thumbnail|length %}
+                              <div class="background single_other_press" style="background-image:url({{ thumbnail }})"></div>
+                            {% endif %}
+                            {% if single.post_title|length %}
+                              <h4>{{ single.post_title }}</h4>
+                            {% endif %}
+                            <div class="separator-press"></div>
+                            {% if single.post_date|length %}
+                              <p>{{ single.date|date }}</p>
+                            {% endif %}
+                            {% if single.guid|length %}
+                              <a href="{{ single.guid }}" class="btn_bebit" title="{{ single.post_title }}">Vai all'articolo</a>
+                            {% endif %}
+                        </div>
+                        {% endfor %}
+                    </div>
+                 </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+{% endif %}

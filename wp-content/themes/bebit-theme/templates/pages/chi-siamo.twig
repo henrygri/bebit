@@ -1,0 +1,23 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	<!-- Title section chi siamo -->
+	{% include "/templates/partial/chi-siamo/title-chi-siamo.twig" with {title: fields_page} %}
+
+	<!-- Grid image section chi siamo -->
+	{% include "/templates/partial/chi-siamo/grid-image.twig" with {grid: fields_page} %}
+
+	<!-- Text cosa facciamo section chi siamo -->
+	{% include "/templates/partial/chi-siamo/text-cosa-facciamo.twig" with {text: fields_page} %}
+
+	<!-- List section chi siamo -->
+	{% include "/templates/partial/chi-siamo/list-chi-siamo.twig" with {list: sezione_gridthree} %}
+
+	<!-- Loghi section chi siamo -->
+	{% include "/templates/partial/chi-siamo/be-one-of-us.twig" with {loghi: sezione_loghi} %}
+
+	<!-- Audio section chi siamo -->
+	{% include "/templates/partial/chi-siamo/audio.twig" with {audio: sezione_audio} %}
+
+{% endblock %}

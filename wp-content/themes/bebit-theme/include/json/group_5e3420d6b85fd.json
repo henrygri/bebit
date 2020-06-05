@@ -1,0 +1,169 @@
+{
+    "key": "group_5e3420d6b85fd",
+    "title": "Chi lo fa",
+    "fields": [
+        {
+            "key": "field_5e342114cd24d",
+            "label": "Titolo",
+            "name": "titolo_chi_lofa",
+            "type": "wysiwyg",
+            "instructions": "Inserisci titolo",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "text",
+            "media_upload": 1,
+            "toolbar": "full",
+            "delay": 0
+        },
+        {
+            "key": "field_5e342126cd24e",
+            "label": "Testo",
+            "name": "testo_chi_lofa",
+            "type": "wysiwyg",
+            "instructions": "Inserisci testo",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "text",
+            "media_upload": 1,
+            "toolbar": "full",
+            "delay": 0
+        },
+        {
+            "key": "field_5e34247675fbb",
+            "label": "Team",
+            "name": "team",
+            "type": "repeater",
+            "instructions": "Aggiungi membro nel team",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Aggiungi membro",
+            "sub_fields": [
+                {
+                    "key": "field_5e3424a275fbc",
+                    "label": "Immagine",
+                    "name": "immagine_team",
+                    "type": "image",
+                    "instructions": "Seleziona immagine membro del team",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5e3424cd75fbd",
+                    "label": "Nome",
+                    "name": "nome_team",
+                    "type": "text",
+                    "instructions": "Inserisci nome membro del team",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e3424e675fbe",
+                    "label": "Ruolo",
+                    "name": "ruolo_team",
+                    "type": "text",
+                    "instructions": "Inserisci ruolo membro del team",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e34250075fbf",
+                    "label": "Descrizione",
+                    "name": "descrizione_team",
+                    "type": "wysiwyg",
+                    "instructions": "Inserisci mini descrizione membro team",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "pages\/chi-lo-fa.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1580476884
+}

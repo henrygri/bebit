@@ -1,0 +1,18 @@
+<section id="groupBebit" class="section">
+	<div class="container">
+		<div class="row justify-content-md-center">
+			<div class="col-lg-10 text-center">
+				<h2 class="title_section wow fadeIn" data-wow-delay="200ms" style="line-height:70px">{{ title_section }}</h2>
+				<div id="box_ball" class="wow fadeIn" data-wow-delay="400ms">
+					<div class="d-flex justify-content-center section">
+						{% for logo in company %}
+							<div class="circle relative" style="background-color:{{ logo.background_circle }}">
+								<div><a href="{{logo.link_azienda.url}}" title="{{logo.logo_azienda.title}}" target="{{logo.link_azienda.target}}"><img src="{{logo.logo_azienda.url}}" alt="{{logo.logo_azienda.title}}"></a></div>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

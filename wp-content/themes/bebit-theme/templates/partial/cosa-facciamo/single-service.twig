@@ -1,0 +1,47 @@
+<section id="singleService">
+	<div class="container">
+		<div class="row justify-content-md-center">
+			<div class="col-lg-10">
+				{% for item in list %}
+				<div class="box_single_service wow fadeIn" data-wow-delay="200ms" id="{{ item.post_name }}">
+					<div class="row">
+						<div class="col-lg-7">
+							<div class="d-lg-none d-sm-block d-md-block mb-5 text-center"><img src="{{ item.meta('icona_servizio').url }}" alt="{{ item.meta('icona_servizio').title }}"></div>
+							{% if item.post_name == 'digital-marketing' %}
+								<h2>{{ item.post_title }}</h2>
+							{% else %}
+								<h3>{{ item.post_title }}</h3>
+							{% endif %}
+							{% if item.descrizione_servizio|length %}
+								<div class="mt-5">{{ item.descrizione_servizio }}</div>
+							{% endif %}
+						</div>
+						<div class="col-lg-5">
+							<div class="d-none d-lg-block"><img src="{{ item.meta('icona_servizio').url }}" alt="{{ item.meta('icona_servizio').title }}"></div>
+							<p class="mt-4 pl-5">{{ item.titolo_elenco_sotto_servizi }}</p>
+							{% if item.elenco_sotto_servizi|length %}
+							<div class="mt-2">
+								<ul>
+									{% for subitem in item.meta('elenco_sotto_servizi') %}
+											<li>{{subitem.sotto_servizio }}</li>
+									{% endfor %}
+								</ul>
+							</div>
+							{% endif %}
+						</div>
+					</div>
+					<div class="row mt-3">
+						<div class="col-lg-4 offset-md-8">
+							<div class="scroll-up">
+								<ul>
+									<span><li>{{ _e('back to top', 'bebit-theme') }}</li></span>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</section>

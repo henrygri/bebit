@@ -1,0 +1,11 @@
+{% if section.testo_case|length %}
+<section id="textCase" class="section-bottom section{% if section.background_testo_case == 'grey' %} bg_grey_light{% endif %}">
+	<div class="container">
+		<div class="row justify-content-md-center">
+			<div class="col-lg-6 text-center">
+				<div>{{ section.testo_case }}</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endif %}

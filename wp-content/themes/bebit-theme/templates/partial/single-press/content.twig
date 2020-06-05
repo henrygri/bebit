@@ -1,0 +1,39 @@
+{% if press.post_title|length %}
+<section id="contentPress">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-11 col-md-10">
+                <div class="box_press_single wow fadeInUp" data-wow-delay="200ms">
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <h1>{{ press.post_title }}</h1>
+                            <p>{{ press.date }}
+                            {% if press.link_articolo.url|length %}
+                            | <a href="{{ press.link_articolo.url }}" title="{{ press.link_articolo.title }}" target="{{ press.link_articolo.target }}">Vai all’articolo originale</a>
+                            {% endif %}
+                            </p>
+                            {% if press.embed_press|length %}
+                              <div class="embed-container mt-5">
+                                  <iframe src="{{ press.embed_press }}" frameborder="0"></iframe>
+                              </div>
+                            {% endif %}
+                            {% if press.contenuto_press|length %}
+                            <div class="paragraph mt-5">
+                                  <p>{{ press.contenuto_press }}</p>
+                                  {% if press.date|length %}
+                                      <p>{{ press.date }}
+                                  {% endif %}
+                                  {% if press.link_articolo.url|length %}|
+                                      <a href="{{ press.link_articolo.url }}" title="{{ press.link_articolo.title }}" target="{{ press.link_articolo.target }}">Vai all’articolo originale</a>
+                                  {% endif %}
+                                  </p>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}

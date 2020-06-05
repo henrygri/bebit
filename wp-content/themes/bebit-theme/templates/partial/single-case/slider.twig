@@ -1,0 +1,30 @@
+<section id="videoSectionCase" class="section section-bottom{% if section.background_sezione_slider == 'grey' %} bg_grey_light{% endif %}">
+			<div class="">
+				<div class="container">
+					<div class="mt-4">
+							<div id="sliderVideo{{index}}" class="relative carousel slide slide-video" data-ride="carousel">
+								<ol class="carousel-indicators">
+								{% set count = 0 %}
+								{% if section.immagine_o_video|length > 1 %}
+										{% for oembed in section.immagine_o_video %}
+												<li data-target="#sliderVideo{{index}}" data-slide-to="{{ count }}" class="{% if count == 0 %}active{% endif %}"></li>
+												{% set count = count + 1 %}
+										{% endfor %}
+								{% endif %}
+								</ol>
+								<div class="carousel-inner">
+											{% for oembed in section.immagine_o_video %}
+										<div class="carousel-item{% if loop.index == 1 %} active{% endif %} text-center">
+													{% if oembed.inserisci_sezione_slider == 'video' %}
+														<iframe src="{{ oembed.video_sezione_slider }}?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen></iframe>
+													{% elseif oembed.inserisci_sezione_slider == 'immagine' %}
+												<img class="{% if oembed.immagine_sezione_slider.width > 1110 %}w-100{% endif %}" src="{{ oembed.immagine_sezione_slider.url }}" alt="{{ oembed.immagine_sezione_slider.title }}">
+													{% endif %}
+											</div>
+											{% endfor %}
+								</div>
+						 </div>
+					</div>
+				</div>
+			</div>
+</section>

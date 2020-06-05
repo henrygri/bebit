@@ -1,0 +1,13 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+		{% include "/templates/partial/in-che-mondo-lavoriamo/title.twig" with {title: fields.titolo_icml } %}
+
+		{% include "/templates/partial/in-che-mondo-lavoriamo/grid-image.twig" with {text: fields.testo_icml, image: fields.meta('immagine_icml').url } %}
+
+		{% include "/templates/partial/in-che-mondo-lavoriamo/group-bebit.twig" with {title_section: fields.titolo_sezione_societa, company: fields.meta('logo_azienda_rep') } %}
+
+		{% include "/templates/partial/in-che-mondo-lavoriamo/services-company.twig" with {services: fields.meta('servizi_azienda')} %}
+
+{% endblock %}

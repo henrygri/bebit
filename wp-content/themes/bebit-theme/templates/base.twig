@@ -1,0 +1,56 @@
+{% block html_head_container %}
+{% include 'html-header.twig' %}
+	{% block head %}
+	{% endblock %}
+	</head>
+{% endblock %}
+
+	<body class="{{body_class}}" data-template="base.twig">
+		<div class="loader"><img src="/content/bebit-loader.gif" alt="Bebit"></div>
+		<header class="header" >
+			{% block header %}
+				<div class="wrapper">
+					<div class="container">
+						<div class="nav_content relative">
+							<a class="hdr-logo-link" href="{{site.url}}" rel="home"><img src="/content/logo_bebit_blue.png"></a>
+							<div id="nav-icon1">
+							  <span></span>
+							  <span></span>
+							  <span></span>
+							</div>
+						</div>
+						<div class="box_nav">
+							<nav id="nav-main" class="nav-main" role="navigation">
+								{% include "menu.twig" with {'items': menu.get_items} %}
+							</nav><!-- #nav -->
+						</div>
+					</div>
+				</div>
+			{% endblock %}
+		</header>
+
+		<section id="content" role="main" class="content-wrapper">
+			<div class="wrapper">
+				{% block content %}
+				{% endblock %}
+			</div>
+		</section>
+
+		{% if fn('get_the_ID') != '24' %}
+		{% if fn('post_password_required') != 1 %}
+			<!-- Block form -->
+			{% include "/templates/partial/block-pre-footer.twig" %}
+		{% endif %}
+		{% endif %}
+
+		{% block footer %}
+			<footer id="footer">
+				{% include 'footer.twig' %}
+			</footer>
+			{{ function('wp_footer') }}
+		{% endblock %}
+
+		{% block javascript %}{% endblock %}
+
+	</body>
+</html>

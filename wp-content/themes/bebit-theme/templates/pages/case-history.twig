@@ -1,0 +1,14 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+		<!-- Intro text archive case -->
+		{% include 'partial/archive-case/title.twig' with {title: title_case, text:text_case} %}
+
+		<!-- List sector archive case -->
+		{% include 'partial/archive-case/list-category.twig' with {list: sectors_list, list2: sectors_list2} %}
+
+		<!-- List case archive case -->
+		{% include 'partial/archive-case/list-case.twig' with {cases: cases} %}
+
+{% endblock %}

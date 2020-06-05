@@ -1,0 +1,53 @@
+<section id="preFooter" class="section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 sx_block">
+            	<div class="box_details_contact wow fadeIn">
+            		{% if fn('get_page_template_slug') == 'pages/chi-lo-fa.php' %}
+		                <h2 class="blue_bebit"><span class="title_details_contact">{{ _e('Do you want to talk to us?', 'bebit-theme') }}</span><br>
+		                <span class="text-white">{{ _e('We’re waiting to hear from you', 'bebit-theme') }}<span class="blue_bebit"></span></span></h2>
+	                {% elseif fn('get_page_template_slug') == 'pages/contatti.php' %}
+	                	<h1 class="blue_bebit"><span class="title_details_contact">{{ _e('Do you want to talk to us?', 'bebit-theme') }}</span><br>
+		                <span class="text-white">{{ _e('We’re waiting to hear from you', 'bebit-theme') }}<span class="blue_bebit"></span></span></h1>
+	                {% else %}
+		                <h5 class="blue_bebit"><span class="title_details_contact">{{ _e('Do you want to talk to us?', 'bebit-theme') }}</span><br>
+		                <span class="text-white">{{ _e('We’re waiting to hear from you', 'bebit-theme') }}<span class="blue_bebit"></span></span></h5>
+	                {% endif %}
+	                <div class="adress">
+		                <div class="row mt-5">
+		                	<div class="box_contact_single">
+		                		<h6 class="blue_bebit mb-3">{{ _e('Turin', 'bebit-theme') }}</h6>
+		                		<p class="text-white">via Andreis 18/16/M</p>
+		                		<p class="text-white mb-3">10152 Torino</p>
+		                		<a href="tel:0114310815"><p class="text-white">011 4310815</p></a>
+		                	</div>
+		                	<div class="box_contact_single">
+		                		<h6 class="blue_bebit mb-3">{{ _e('Milan', 'bebit-theme') }}</h6>
+		                		<p class="text-white">via Rutilia, 10</p>
+		                		<p class="text-white mb-3">20141 Milano</p>
+		                		<a href="tel:025740639"><p class="text-white">02 57406391</p></a>
+		                	</div>
+		                </div>
+	                </div>
+	                <div class="social">
+	                	<ul class="list_horizontal">
+	                		<li><a href="https://www.facebook.com/BebitBeDigital" title="Facebbok" target="_blank"><i class="fab fa-facebook"></i></a></li>
+	                		<li><a href="https://www.instagram.com/bebit_be_digital/" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a></li>
+	                		<li><a href="https://www.linkedin.com/company/bebit-be-digital/" title="Linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+	                	</ul>
+	                </div>
+                </div>
+            </div>
+            <div class="col-lg-8 grey">
+            	<div class="accordion_form"><button id="btn_form_mobile" class="btn_bebit"><img src="/content/icon-arrow.png" />Scrivici</button></div>
+            	<div class="form-contact_footer wow fadeIn">
+                {% if current_language == 'it' %}
+      					     {{ function('do_shortcode', '[contact-form-7 id="76" title="Form block pre footer"]') }}
+                {% else %}
+                     {{ function('do_shortcode', '[contact-form-7 id="1642" title="Form block pre footer en"]') }}
+                {% endif %}
+      				</div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,37 @@
+<section id="mockupSection" class="section section-bottom{% if section.background_sezione_mobile == 'grey' %} bg_grey_light{% endif %}">
+	<div class="">
+		<div class="container">
+			<div class="d-flex align-items-center flex-column flex-md-row">
+				<div class="col-sm-12 col-md-6 col-lg-6 order-2 order-md-1">
+					<div class="wow fadeIn" data-wow-delay="200ms">
+            {% if section.categoria_sezione_mobile|length %}
+						     <span class="label-case d-none d-md-block">{{ section.categoria_sezione_mobile}}</span>
+            {% endif %}
+            {% if section.titolo_sezione_mobile|length %}
+						     <h2 class="mb-4 title-section-case">{{ section.titolo_sezione_mobile}}</h2>
+            {% endif %}
+            {% if section.testo_sezione_mobile|length %}
+						     <div>{{ section.testo_sezione_mobile}}</div>
+            {% endif %}
+					</div>
+				</div>
+        {% if section.gallery_sezione_mobile|length %}
+				<div class="col-sm-12 col-md-6 col-lg-6 order-1 order-md-2">
+            {% if section.categoria_sezione_mobile|length %}
+						     <span class="label-case d-block d-md-none">{{ section.categoria_sezione_mobile }}</span>
+            {% endif %}
+					<div id="carouselFadeCase" class="relative slide carousel-fade" data-ride="carousel" data-interval="3000">
+					  <div class="carousel-inner">
+							{% for image in section.gallery_sezione_mobile %}
+					    <div class="carousel-item{% if loop.index == 1 %} active{% endif %}">
+					      <img class="d-block w-100" src="{{ image.url }}" alt="{{ image.title }}">
+					    </div>
+							{% endfor %}
+					  </div>
+					</div>
+				</div>
+        {% endif %}
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,10 @@
+<section id="gridImage" class="section wow fadeIn" data-wow-delay="200ms">
+	<div class="d-flex align-items-center flex-column flex-lg-row">
+		{% if text|length %}
+			<div class="text_grid_image grey">{{ text }}</div>
+		{% endif %}
+		{% if image|length %}
+			<div class="background image_grid_text" style="background-image:url({{ image }})"></div>
+		{% endif %}
+	</div>
+</section>

@@ -1,0 +1,12 @@
+<section id="gridImage" class="section wow fadeIn" data-wow-delay="200ms">
+	<div class="d-flex align-items-center flex-column flex-lg-row">
+		{% if grid.testo_grid_chisiamo|length %}
+			<div class="text_grid_image grey">
+					<p>{{ grid.testo_grid_chisiamo }}</p>
+			</div>
+		{% endif %}
+		{% if grid.meta('immagine_grid_chisiamo').url|length %}
+				<div class="background image_grid_text" style="background-image:url({{grid.meta('immagine_grid_chisiamo').url}})"></div>
+		{% endif %}
+	</div>
+</section>

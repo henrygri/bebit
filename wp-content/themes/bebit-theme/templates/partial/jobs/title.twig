@@ -1,0 +1,14 @@
+{% if title|length %}
+<section id="jobsTitle" class="d-none d-md-block">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="title_section wow fadeIn" data-wow-delay="200ms">{{ title }}</h1>
+				{% if text|length %}
+					<div class="my-5 wow fadeIn" data-wow-delay="200ms">{{ text }}</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</section>
+{% endif %}

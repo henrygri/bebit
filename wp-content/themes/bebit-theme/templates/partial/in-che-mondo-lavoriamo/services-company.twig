@@ -1,0 +1,49 @@
+<section id="servicesCompany" class="section wow fadeIn" data-wow-delay="200ms">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3 col-md-3">
+			{% for service in services %}
+				{% if loop.index == 1 %}
+				<div class="row">
+					<div class="col-md-12">
+						<div class="single-service-company">
+							<h3 style="color:{{ service.colore_titolo }}">{{ service.titolo_servizio }}</h3>
+							{{service.servizi_interni}}
+						</div>
+					</div>
+				</div>
+				{% else %}
+				{% endif %}
+				{% endfor %}
+			</div>
+
+			<div class="col-lg-9 col-md-9">
+				<div class="row">
+					{% for service in services %}
+					{% if loop.index != 1 and loop.index < 8 %}
+					<div class="col-lg-4 col-md-6">
+						<div class="single-service-company">
+							<h3 style="color:{{ service.colore_titolo }}">{{ service.titolo_servizio }}</h3>
+							{{service.servizi_interni}}
+						</div>
+					</div>
+					{% endif %}
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			{% for service in services %}
+			{% if loop.index > 7 %}
+			<div class="{% if not loop.last %}col-md-3{% else %}col-lg-4 col-md-5{% endif %}">
+				<div class="single-service-company">
+					<h3 style="color:{{ service.colore_titolo }}">{{ service.titolo_servizio }}</h3>
+					{{service.servizi_interni}}
+				</div>
+			</div>
+			{% else %}
+			{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+</section>

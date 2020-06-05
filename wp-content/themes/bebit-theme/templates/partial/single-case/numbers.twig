@@ -1,0 +1,21 @@
+<section id="numbers" class="section section-bottom{% if section.background_sezione_numeri == 'grey' %} bg_grey_light{% endif %}">
+    <div class="">
+      <div class="container">
+        {% if section.titolo_sezione_numeri|length %}
+            <h4 class="title-section-case text-center mb-5 wow fadeIn">{{ section.titolo_sezione_numeri }}</h4>
+        {% endif %}
+        {% if section.box_numero|length %}
+        <div class="row">
+          {% for number in section.box_numero %}
+            <div class="col-lg-4">
+              <div class="single-number text-center wow fadeIn" data-wow-delay="{{ loop.index * 200}}ms">
+                <span>{{ number.numero }}</span>
+                <p>{{ number.soggetto_numero }}</p>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+</section>

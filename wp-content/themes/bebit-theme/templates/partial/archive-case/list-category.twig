@@ -1,0 +1,24 @@
+{% if list|length %}
+<section id="categoryFilter">
+	<button class="btn_bebit btn_cat_case relative"><span>Tutti i lavori</span><img src="/content/icon-arrow.png" alt="Case history"></button>
+	<div class="mobile-list-case">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="list_category">
+						<div class="btn_filter active" data-filter="*">HIGHLIGHTS</div>
+            			{% for item in list %}
+						   <div class="btn_filter" data-filter=".{{ item.slug }}">{{ item.name }}</div>
+            			{% endfor %}
+					</div>
+					<div class="list_category mt-3">
+						{% for item in list2 %}
+							 <div class="btn_filter" data-filter=".{{ item.slug }}">{{ item.name }}</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endif %}
